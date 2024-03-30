@@ -88,7 +88,6 @@
 <script defer crossorigin="anonymous" src="{{ $search.RelPermalink }}"></script>
 {{- end }}
 {{- end -}}
-<script defer src="https://analytics.eu.umami.is/script.js" data-website-id="1b582264-1af4-48a5-a1b6-f77e455694a1"></script>
 {{- /* Favicons */}}
 <link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
@@ -97,6 +96,8 @@
 <link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
+{{- /* Mastodon Verification */}}
+<link rel="me" href="https://mastodon.social/@kpayavlas" />
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
@@ -105,6 +106,7 @@
 {{- range .AllTranslations -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
+{{- /* Umami Tracking Code */}}
 <script defer src="https://eu.umami.is/script.js" data-website-id="1b582264-1af4-48a5-a1b6-f77e455694a1"></script>
 <noscript>
     <style>
