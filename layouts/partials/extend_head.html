@@ -1,10 +1,9 @@
 {{- /* Head custom content area start */ -}}
-{{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
-{{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
-{{- /* Head custom content area end */ -}}
+
 {{- /* Umami Tracking Code */}}
 <script defer src="https://eu.umami.is/script.js" data-website-id="1b582264-1af4-48a5-a1b6-f77e455694a1"></script>
-<!-- Matomo -->
+
+{{- /* Matomo */}}
 <script>
     var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -18,5 +17,4 @@
       g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
     })();
   </script>
-  <!-- End Matomo Code -->
-  
+  {{- /* Head custom content area end */ -}}
